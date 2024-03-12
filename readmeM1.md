@@ -292,7 +292,7 @@ int main() {
     return 0;
 }
 ```
-#### Jawaban : 
+#### Jawaban :
 
 Class:
 
@@ -311,6 +311,30 @@ Struct adalah tipe data yang dapat menyimpan sekumpulan data dengan tipe-tipe ya
 - Pada dasarnya, struct adalah konstruksi yang lebih sederhana dibandingkan dengan class, tetapi dapat digunakan untuk tujuan yang serupa, terutama dalam bahasa pemrograman seperti C.
   
 #### Output:![Screenshot (28)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/189e2506-590c-4725-b1cb-f5815342744f)
+
+#### Deskripsi Program :  Program ini merupakan contoh implementasi dari konsep struktur (struct) dan class dalam bahasa pemrograman C++. 
+
+- Deklarasi Struktur (Struct) Address:
+Struktur Address digunakan untuk merepresentasikan alamat seseorang.
+Struktur ini memiliki empat anggota: street, city, state, dan zipCode, yang semuanya bertipe string.
+
+- Deklarasi Class Person:
+Class Person digunakan untuk merepresentasikan individu.
+Class ini memiliki beberapa anggota data, antara lain:
+name: Untuk menyimpan nama orang.
+age: Untuk menyimpan usia orang.
+address: Objek dari struktur Address, untuk menyimpan alamat orang.
+Class ini juga memiliki sebuah metode displayInfo() untuk menampilkan informasi tentang seseorang, termasuk nama, usia, dan alamatnya.
+Fungsi main():
+
+- Di dalam fungsi main(), sebuah objek person dari kelas Person dibuat.
+Kemudian, data anggota dari objek tersebut diatur menggunakan operator titik (.) untuk mengakses anggota data dan objek struktur dalam objek person.
+Terakhir, metode displayInfo() dipanggil untuk menampilkan informasi tentang orang tersebut di layar.
+
+- Output:
+Program akan mencetak informasi tentang orang yang direpresentasikan oleh objek person ke layar.
+Program ini menunjukkan cara menggunakan struktur dan class dalam C++ untuk menyusun data dengan lebih terstruktur dan membentuk entitas yang lebih kompleks seperti orang dengan nama, usia, dan alamat. Ini memanfaatkan konsep enkapsulasi dan abstraksi untuk membuat representasi yang lebih bersih dan lebih mudah dipelihara.
+
 
 #### Full code Screenshot:![Screenshot (26)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/009be6c4-2bea-4400-a170-c6fe6acabfd6) ![Screenshot (27)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/405354df-1df9-486d-b7f9-d1b9caf25bd0)
 
@@ -381,6 +405,27 @@ f. Kompleksitas Waktu Operasi:
 - Map: Operasi dasar seperti akses, penambahan, atau penghapusan pada map memiliki kompleksitas waktu yang bergantung pada struktur data internal yang digunakan. Namun, dalam banyak kasus, map dapat memberikan kompleksitas waktu rata-rata O(1) untuk operasi dasar ini.
 
 #### Output: ![Screenshot (29)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/552035c0-7278-4fcf-b969-ea9463a6bfb6)
+
+#### Deskripsi Program : Program ini merupakan contoh penggunaan struktur data map dalam bahasa pemrograman C++. 
+
+- Penggunaan Library:
+Program menggunakan beberapa library standar C++, yaitu <iostream> untuk input-output standar, <map> untuk struktur data map, dan <string> untuk menggunakan tipe data string.
+
+- Deklarasi dan Penggunaan Map:
+Sebuah objek map bernama employeeAges dideklarasikan dengan menggunakan map<string, int>. Ini berarti bahwa map memiliki string sebagai kunci (key) dan int sebagai nilai (value).
+Beberapa entri ditambahkan ke dalam map menggunakan operator indeks ([]). Ini mengaitkan nama karyawan dengan usia mereka.
+
+- Menampilkan Usia Karyawan:
+Usia setiap karyawan kemudian ditampilkan ke layar menggunakan cout. Penggunaan operator[] pada map memungkinkan kita untuk mengakses nilai berdasarkan kuncinya.
+
+- Menampilkan Seluruh Map Menggunakan Iterator:
+Sebuah iterator (it) digunakan untuk mengakses setiap elemen dalam map.
+Sebuah loop for digunakan untuk mengiterasi melalui setiap elemen dalam map, dari awal (begin()) hingga akhir (end()).
+Dalam setiap iterasi, nama karyawan dan usianya ditampilkan ke layar.
+
+- Output:
+Program akan mencetak usia setiap karyawan ke layar, kemudian mencetak seluruh map yang berisi nama karyawan dan usia mereka.
+Program ini menunjukkan bagaimana struktur data map dapat digunakan untuk mengaitkan kunci dengan nilai dan bagaimana mengakses dan mengiterasi melalui entri-entri dalam map menggunakan iterator. 
 
 #### Full code Screenshot: ![Screenshot (30)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/1a1c914e-86c5-4208-924c-25e0edb0d2e3)
 
