@@ -1,5 +1,5 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
-<p align="center">Caroline Carren</p>
+# <h1 align="center">Laporan Praktikum Modul 1 - Tipe Data</h1>
+<p align="center">Caroline Carren Aurelia R (2311102174)</p>
 
 ## Dasar Teori
 
