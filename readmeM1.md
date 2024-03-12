@@ -447,5 +447,4 @@ Array adalah salah satu jenis struktur data yang sederhana, yang membantu dalam 
 Dengan memahami konsep struktur data dan mengaplikasikannya dengan baik, maka dapat menghasilkan algoritma yang efektif dan program yang lebih baik secara keseluruhan. 
 
 ## Referensi
-[1] Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). "Introduction to Algorithms." The MIT Press.
-
+[1] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, "Introduction to Algorithms," The MIT Press, 2009.
