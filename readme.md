@@ -69,9 +69,11 @@ int main ()
     return 0;
 
 }
-Deskripsi Program : Program ini merupakan kalkulator sederhana yang menerima input dari pengguna berupa operator matematika (+, -, *, atau /) dan dua bilangan (num1 dan num2). 
-Program kemudian melakukan operasi matematika sesuai dengan operator yang dimasukkan dan menampilkan hasilnya.
 ```
+
+#### Deskripsi Program : Program ini merupakan kalkulator sederhana yang menerima input dari pengguna berupa operator matematika (+, -, *, atau /) dan dua bilangan (num1 dan num2). Program kemudian melakukan operasi matematika sesuai dengan operator yang dimasukkan dan menampilkan hasilnya.
+
+
 
 ### 2. [Tipe Data Abstrak]
 
@@ -110,9 +112,11 @@ int main()
 
     return 0;
 }
-Deskripsi Program : Program ini menyajikan cara menggunakan struktur untuk mengorganisir data mahasiswa dan kemudian mencetak informasi mereka ke layar. Variabel struktur memungkinkan pengelompokan data terkait dalam satu unit, memudahkan pengelolaan dan akses ke data tersebut.
 
 ```
+#### Deskripsi Program : Program ini menyajikan cara menggunakan struktur untuk mengorganisir data mahasiswa dan kemudian mencetak informasi mereka ke layar. Variabel struktur memungkinkan pengelompokan data terkait dalam satu unit, memudahkan pengelolaan dan akses ke data tersebut.
+
+
 ### 3. [Tipe Data Koleksi]
 
 ```C++
@@ -140,9 +144,11 @@ int main()
     return 0;
 
 }
-Deskripsi Program : Program ini memberikan contoh penggunaan array untuk menyimpan dan mengakses sejumlah nilai integer. Array menyediakan cara yang efisien untuk mengelola sekumpulan data yang serupa.
 
 ```
+#### Deskripsi Program : Program ini memberikan contoh penggunaan array untuk menyimpan dan mengakses sejumlah nilai integer. Array menyediakan cara yang efisien untuk mengelola sekumpulan data yang serupa.
+
+
 
 ## Unguided 
 
@@ -200,9 +206,41 @@ int main() {
     return 0;
 }
 ```
-#### Output:
+#### Deskripsi Program : 
+Program ini merupakan contoh penggunaan tipe data primitif dalam bahasa pemrograman C++. Program ini melakukan beberapa hal:
 
-#### Full code Screenshot:
+a. Mendefinisikan Fungsi:
+- calculateCircleArea: Menerima jari-jari lingkaran dan mengembalikan luas lingkaran dengan menggunakan nilai PI yang telah ditentukan.
+- isEven: Menerima sebuah angka dan mengembalikan true jika angka tersebut genap, dan false jika ganjil.
+  
+b. Mendeklarasikan dan Menginisialisasi Variabel:
+- initial: Sebuah karakter yang diset sebagai 'C'.
+- age: Sebuah bilangan bulat yang diset sebagai 18.
+- height: Sebuah bilangan pecahan yang diset sebagai 1.75.
+- circleRadius: Sebuah bilangan pecahan yang diset sebagai 5.5.
+- isStudent: Sebuah nilai boolean yang diset sebagai true.
+  
+c. Menampilkan Nilai Variabel:
+- Menampilkan nilai variabel initial, age, height, dan hasil perhitungan luas lingkaran ke layar.
+- Menampilkan pesan yang menunjukkan apakah seseorang adalah seorang mahasiswa (isStudent).
+- Menampilkan pesan yang menunjukkan apakah umur (age) merupakan bilangan genap atau ganjil.
+
+Kesimpulan dari materi tipe data primitif:
+
+Program ini menggunakan tipe data primitif seperti char, int, dan double untuk menyimpan informasi seperti nama awal, usia, tinggi badan, dan jari-jari lingkaran.
+
+a. Fungsi calculateCircleArea menggunakan tipe data primitif double untuk mengembalikan nilai luas lingkaran.
+
+b. Fungsi isEven menggunakan tipe data primitif int untuk menentukan apakah sebuah angka genap atau ganjil.
+
+c. Variabel isStudent menggunakan tipe data primitif bool untuk menyimpan status apakah seseorang mahasiswa atau tidak.
+
+Dari program ini, dapat disimpulkan bahwa tipe data primitif sangat penting dalam pemrograman karena digunakan untuk menyimpan nilai-nilai dasar dan melakukan operasi matematika sederhana. Penggunaan tipe data primitif memungkinkan program untuk melakukan berbagai macam tugas, seperti menghitung luas lingkaran, mengecek apakah sebuah angka genap atau ganjil, dan lain sebagainya.
+
+
+#### Output:![Screenshot (23)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/f3853460-f60d-4284-a25d-e276938cc642)
+
+#### Full code Screenshot:![Screenshot (24)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/12dc4d35-7ea8-46dd-a620-9af6d4808c58)![Screenshot (25)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/91993ceb-5fb1-43ae-bbbe-564f274bdfa5)
 
 ### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya]
 ```C++
@@ -254,9 +292,27 @@ int main() {
     return 0;
 }
 ```
-#### Output:
+#### Jawaban : 
 
-#### Full code Screenshot:
+Class:
+
+Class adalah struktur data yang mendefinisikan sebuah tipe baru yang terdiri dari data dan fungsi-fungsi yang beroperasi pada data tersebut.
+- Dalam sebuah class, data-dan-fungsi dapat dikelompokkan bersama untuk merepresentasikan sebuah objek atau konsep yang lebih kompleks.
+- Class menyediakan cara untuk menerapkan konsep pemrograman berorientasi objek (OOP), yang menggabungkan data dan operasi pada data tersebut menjadi satu kesatuan yang disebut sebagai objek.
+- Data dalam sebuah class biasanya dideklarasikan sebagai variabel-variabel anggota (member variables) dan fungsi-fungsi yang bekerja pada data tersebut disebut sebagai metode-metode (methods).
+- Class memungkinkan untuk melakukan enkapsulasi, yaitu menyembunyikan rincian implementasi internal dari luar, sehingga hanya metode-metode yang dapat diakses dari luar.
+
+Struct:
+
+Struct adalah tipe data yang dapat menyimpan sekumpulan data dengan tipe-tipe yang berbeda dalam satu unit.
+- Dalam struct, setiap anggota data disebut dengan nama field atau variabel, dan setiap field dapat memiliki tipe data yang berbeda.
+- Secara umum, struct digunakan untuk mengelompokkan data terkait bersama-sama untuk mewakili sebuah konsep atau objek.
+- Struct biasanya tidak memiliki metode-metode yang terkait langsung dengan data yang disimpan di dalamnya, meskipun beberapa bahasa pemrograman seperti C++ mengizinkan penambahan metode ke dalam struct.
+- Pada dasarnya, struct adalah konstruksi yang lebih sederhana dibandingkan dengan class, tetapi dapat digunakan untuk tujuan yang serupa, terutama dalam bahasa pemrograman seperti C.
+  
+#### Output:![Screenshot (28)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/189e2506-590c-4725-b1cb-f5815342744f)
+
+#### Full code Screenshot:![Screenshot (26)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/009be6c4-2bea-4400-a170-c6fe6acabfd6) ![Screenshot (27)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/405354df-1df9-486d-b7f9-d1b9caf25bd0)
 
 ### 3. [Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.]
 
@@ -291,11 +347,59 @@ int main() {
 }
 
 ```
-#### Output:
+#### Jawaban :
+Perbedaan utama antara array dan map terletak pada cara data disimpan dan diakses, serta kemampuan dan kegunaan masing-masing struktur data. diantara lain yaitu :
 
-#### Full code Screenshot:
+a. Struktur Data:
 
-## Kesimpulan
+- Array: Array adalah struktur data linear yang menyimpan kumpulan elemen dengan tipe data yang sama secara berurutan dalam memori. Setiap elemen diakses menggunakan indeks numerik yang berurutan, dimulai dari 0.
+- Map: Map adalah struktur data asosiatif yang menyimpan kumpulan pasangan kunci-nilai (key-value pairs). Setiap elemen memiliki sebuah kunci yang unik dan terkait dengan sebuah nilai. Data dalam map tidak disimpan secara berurutan dalam memori.
+
+b. Akses Data:
+
+- Array: Akses ke elemen-elemen array dilakukan dengan menggunakan indeks numerik. Indeks ini mengidentifikasi posisi relatif dari setiap elemen dalam array.
+- Map: Akses ke elemen-elemen map dilakukan dengan menggunakan kunci (key) yang unik. Kunci digunakan untuk mengidentifikasi nilai yang terkait.
+
+c. Penambahan dan Penghapusan Elemen:
+
+- Array: Untuk menambah atau menghapus elemen dalam array, seringkali memerlukan realokasi memori dan penggeseran elemen-elemen lainnya.
+- Map: Penambahan dan penghapusan elemen dalam map biasanya lebih efisien karena tidak memerlukan realokasi memori atau penggeseran elemen lainnya.
+
+d. Kemampuan Pencarian:
+
+- Array: Pencarian dalam array dapat dilakukan dengan melakukan iterasi secara linear atau menggunakan algoritma pencarian yang lebih efisien jika array terurut.
+- Map: Pencarian dalam map biasanya dilakukan secara lebih efisien dengan menggunakan struktur data internal yang disebut sebagai tabel hash atau pohon pencarian biner (binary search tree).
+
+e. Kemampuan untuk Menangani Kunci Duplikat:
+
+- Array: Dalam array, kunci tidak diperlukan karena akses dilakukan menggunakan indeks numerik. Oleh karena itu, konsep kunci duplikat tidak berlaku.
+- Map: Map dapat menangani kunci duplikat dengan cara mengganti nilai yang terkait dengan kunci yang sama atau menggunakan struktur data yang mendukung kunci duplikat, seperti multimap.
+
+f. Kompleksitas Waktu Operasi:
+
+- Array: Operasi dasar seperti akses, penambahan, atau penghapusan pada array memiliki kompleksitas waktu O(1) untuk akses (jika indeks diketahui), namun O(n) untuk penambahan atau penghapusan (jika perlu realokasi memori).
+- Map: Operasi dasar seperti akses, penambahan, atau penghapusan pada map memiliki kompleksitas waktu yang bergantung pada struktur data internal yang digunakan. Namun, dalam banyak kasus, map dapat memberikan kompleksitas waktu rata-rata O(1) untuk operasi dasar ini.
+
+#### Output: ![Screenshot (29)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/552035c0-7278-4fcf-b969-ea9463a6bfb6)
+
+#### Full code Screenshot: ![Screenshot (30)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/1a1c914e-86c5-4208-924c-25e0edb0d2e3)
+
+## Kesimpulan :
+Kesimpulan yang dapat saya ambil dari pembelajaran ini yaitu :
+
+- Struktur Data Mengorganisasikan Data:
+Struktur data membantu kita mengatur data dengan baik sehingga logika program menjadi lebih terstruktur. Dengan demikian, program menjadi lebih mudah dipahami dan dipelihara.
+
+- Memahami Pengertian dan Langkah-langkah Pembuatan Program:
+Melalui pembelajaran struktur data, kita belajar tentang pengertian struktur data, langkah-langkah pembuatan program, dan berbagai tipe data yang dapat digunakan dalam pemrograman.
+
+- Pemilihan Struktur Data yang Tepat:
+Pemilihan struktur data yang tepat dalam pemrograman sangat penting. Struktur data yang sesuai akan menghasilkan algoritma yang jelas dan tepat, sehingga membuat program menjadi lebih sederhana dan efisien.
+
+- Peran Array dalam Struktur Data:
+Array adalah salah satu jenis struktur data yang sederhana, yang membantu dalam penyimpanan data dalam urutan tertentu di lokasi memori komputer. Penggunaan array secara tepat dapat meningkatkan efisiensi program.
+
+Dengan memahami konsep struktur data dan mengaplikasikannya dengan baik, maka dapat menghasilkan algoritma yang efektif dan program yang lebih baik secara keseluruhan. 
 
 ## Referensi
 [1] Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). "Introduction to Algorithms." The MIT Press.
