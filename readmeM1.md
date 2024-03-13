@@ -472,5 +472,7 @@ Dengan memahami konsep struktur data dan mengaplikasikannya dengan baik, maka da
 
 ## Referensi
 [1] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, "Introduction to Algorithms," The MIT Press, 2009.
+
 [2] Weiss, M. A., "Data Structures and Algorithm Analysis in C++," The Institute of Electrical and Electronics Engineers (IEEE), 2014.
+
 [3] Mehlhorn, K. dan Sanders, P., "Algorithms and Data Structures: The Basic Toolbox," The Institute of Electrical and Electronics Engineers (IEEE), 2008.
