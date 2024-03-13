@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Tipe data adalah konsep dasar dalam ilmu komputer yang menggambarkan jenis nilai yang dapat disimpan dan dioperasikan oleh suatu program komputer. Dalam konteks struktur data dan algoritma, pemahaman yang baik tentang tipe data sangat penting untuk merancang algoritma yang efisien dan efektif. Berikut adalah beberapa dasar teori tentang tipe data:
+Tipe data adalah konsep dasar dalam ilmu komputer yang menggambarkan jenis nilai yang dapat disimpan dan dioperasikan oleh suatu program komputer. Dalam konteks struktur data dan algoritma, pemahaman yang baik tentang tipe data sangat penting untuk merancang algoritma yang efisien dan efektif. Berikut adalah beberapa dasar teori tentang tipe data:[1]
 
 Tipe Data Dasar:
 - Integer: Menyimpan bilangan bulat. Misalnya, int pada banyak bahasa pemrograman.
@@ -294,6 +294,10 @@ int main() {
 ```
 #### Jawaban :
 
+Class: Dalam konteks pemrograman berorientasi objek, "class" adalah struktur data yang dapat mencakup data anggota (atribut) dan fungsi anggota (metode) yang bersifat terkait. Ini adalah sebuah template untuk membuat objek yang memiliki sifat dan perilaku yang sama. Dalam "Data Structures and Algorithm Analysis in C++", kelas-kelas mungkin digunakan untuk mewakili struktur data seperti list, tumpukan, antrian, dan sebagainya. Metode yang terkait dengan kelas-kelas ini mungkin menerapkan algoritma tertentu untuk berbagai operasi yang terkait dengan struktur data tersebut.[2]
+
+Struct: "Struct" adalah struktur data sederhana yang terdiri dari satu atau lebih tipe data yang dikelompokkan bersama. Dalam C++, "struct" mirip dengan "class", namun perbedaannya terletak pada hak akses default. Secara default, anggota dari sebuah "struct" adalah publik, sedangkan dalam sebuah "class", anggota tersebut secara default adalah private. Dalam buku ini, "struct" mungkin digunakan untuk merepresentasikan struktur data yang lebih sederhana atau sebagai bagian dari implementasi dari struktur data yang lebih kompleks.[2]
+
 Class:
 
 Class adalah struktur data yang mendefinisikan sebuah tipe baru yang terdiri dari data dan fungsi-fungsi yang beroperasi pada data tersebut.
@@ -372,6 +376,26 @@ int main() {
 
 ```
 #### Jawaban :
+
+Perbedaan antara array dan map :
+
+- Array:
+
+Merupakan struktur data yang menyimpan elemen-elemen dengan tipe data yang sama dalam urutan terindeks.
+Memiliki akses yang cepat ke elemen-elemen berdasarkan indeksnya.
+Ukuran array biasanya tetap dan harus ditentukan saat deklarasi.
+Pengaksesan elemen dalam array memiliki kompleksitas waktu O(1) karena dapat diakses secara langsung melalui indeksnya.[3]
+
+- Map:
+
+Merupakan struktur data yang memetakan kunci (key) ke nilai (value) yang terkait.
+Dapat menyimpan data dengan tipe data yang berbeda untuk kunci dan nilai.
+Ukuran map dapat berubah secara dinamis sesuai dengan penambahan atau penghapusan elemen.
+Pengaksesan elemen dalam map biasanya memiliki kompleksitas waktu O(log n) atau O(1), tergantung pada implementasi, karena memerlukan pencarian berbasis kunci.
+Dalam konteks algoritma dan struktur data, array sering digunakan untuk penyimpanan data yang sederhana dan memiliki akses yang cepat berdasarkan indeksnya. Sementara itu, map digunakan ketika diperlukan asosiasi antara kunci dan nilai, dan ketika pencarian atau pengaksesan data berdasarkan kunci menjadi penting.[3]
+
+
+
 Perbedaan utama antara array dan map terletak pada cara data disimpan dan diakses, serta kemampuan dan kegunaan masing-masing struktur data. diantara lain yaitu :
 
 a. Struktur Data:
@@ -448,3 +472,5 @@ Dengan memahami konsep struktur data dan mengaplikasikannya dengan baik, maka da
 
 ## Referensi
 [1] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, "Introduction to Algorithms," The MIT Press, 2009.
+[2] Weiss, M. A., "Data Structures and Algorithm Analysis in C++," The Institute of Electrical and Electronics Engineers (IEEE), 2014.
+[3] Mehlhorn, K. dan Sanders, P., "Algorithms and Data Structures: The Basic Toolbox," The Institute of Electrical and Electronics Engineers (IEEE), 2008.
