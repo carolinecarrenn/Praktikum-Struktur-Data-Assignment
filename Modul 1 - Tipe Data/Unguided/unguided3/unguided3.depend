@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1710215208 source:c:\struktur-data-praktikum\modul 1 - tipe data\unguided\unguided3\main.cpp
+	<iostream>
+	<map>
+	<string>
+
