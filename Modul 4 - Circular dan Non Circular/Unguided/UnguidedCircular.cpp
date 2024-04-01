@@ -390,7 +390,7 @@ int main()
         break;
 
     case 11:
-        cout << "-Tampilkan-" << endl;
+        cout << "-Data Mahasiswa-" << endl;
         tampilkan();
         goto menu;
         break;
