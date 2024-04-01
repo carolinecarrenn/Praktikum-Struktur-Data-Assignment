@@ -24,70 +24,14 @@ Ada dua jenis utama linked list: linked list linear (non-circular) dan linked li
    - Memerlukan pencarian linier untuk mengakses elemen tertentu, tidak seperti array yang dapat diakses secara langsung dengan indeks.[1]
 
    Contoh program non circular :
-```C++
-#include <iostream>
+   ![carbon (4)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/887c4eaa-e365-41e0-9333-eb1306bd26a8)
 
-struct node
-{
-    int data;
-    node *next;
-};
 
-class linked_list
-{
-private:
-    node *head,*tail;
-public:
-    linked_list()
-    {
-        head = NULL;
-        tail = NULL;
-    }
 
-    void add_node(int n)
-    {
-        node *tmp = new node;
-        tmp->data = n;
-        tmp->next = NULL;
-
-        if(head == NULL)
-        {
-            head = tmp;
-            tail = tmp;
-        }
-        else
-        {
-            tail->next = tmp;
-            tail = tail->next;
-        }
-    }
-
-    void display()
-    {
-        node *temp = head;
-        while(temp != NULL)
-        {
-            cout << temp->data << " ";
-            temp = temp->next;
-        }
-    }
-};
-
-int main()
-{
-    linked_list a;
-    a.add_node(1);
-    a.add_node(2);
-    a.add_node(3);
-    a.display();
-    return 0;
-}  
-```
-
-2.  **Linked List Circular**
+ 2. **Linked List Circular**
    
     Linked list circular adalah variasi dari linked list di mana node terakhir dalam linked list mengarah kembali ke node pertama, membentuk lingkaran atau siklus.
-    Ini berarti tidak ada elemen yang memiliki pointer yang menunjuk ke nilai null.
+    Ini berarti tidak ada elemen yang memiliki pointer yang menunjuk ke nilai null.[1]
 
     Operasi Dasar:
     - Operasi pada linked list circular mirip dengan operasi pada linked list non-circular. Namun, traversal perlu memperhatikan kondisi terminasi agar tidak jatuh ke dalam loop tak terbatas.
@@ -98,80 +42,12 @@ int main()
     
     Kekurangan Linked List Circular:
     - Memerlukan perhatian khusus dalam implementasi untuk mencegah deadlock atau loop tak terbatas.
-    - Pemeliharaan tambahan diperlukan untuk memastikan bahwa tidak ada siklus yang rusak atau tidak valid.
+    - Pemeliharaan tambahan diperlukan untuk memastikan bahwa tidak ada siklus yang rusak atau tidak valid.[1]
   
     Contoh program circular :
-```C++
-#include <iostream>
+    ![carbon (5)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/c2c7b192-16f7-4328-b4cd-7c90e3b597ae)
 
-struct Node
-{
-    int data;
-    Node *next;
-};
 
-class CircularLinkedList
-{
-private:
-    Node *head;
-public:
-    CircularLinkedList()
-    {
-        head = NULL;
-    }
-
-    void add_node(int data)
-    {
-        Node *newNode = new Node();
-        newNode->data = data;
-        newNode->next = NULL;
-
-        if (head == NULL)
-        {
-            head = newNode;
-            head->next = head;
-        }
-        else
-        {
-            Node *temp = head;
-            while (temp->next != head)
-            {
-                temp = temp->next;
-            }
-            temp->next = newNode;
-            newNode->next = head;
-        }
-    }
-
-    void display()
-    {
-        Node *temp = head;
-        if (head == NULL)
-        {
-            std::cout << "List is empty." << std::endl;
-            return;
-        }
-
-        do
-        {
-            std::cout << temp->data << " -> ";
-            temp = temp->next;
-        } while (temp != head);
-
-        std::cout << " " << std::endl;
-    }
-};
-
-int main()
-{
-    CircularLinkedList list;
-    list.add_node(1);
-    list.add_node(2);
-    list.add_node(3);
-    list.display();
-    return 0;
-}
-```
 
 
 ## Guided 
@@ -703,459 +579,13 @@ Program ini menyediakan berbagai fungsi dasar untuk mengelola linked list dengan
 
 ## Unguided 
 
-### 1. [Buatlah program menu Linked List Non Circular untuk menyimpan Nama dan NIM mahasiswa, dengan menggunakan input dari user. ]
+### [Buatlah program menu Linked List Circular untuk menyimpan Nama dan NIM mahasiswa, dengan menggunakan input dari user. ]
+![Screenshot (130)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/0c53ede6-f1a4-460b-aebb-e5c4f84b219f)
+![Screenshot (131)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/bf7c2b76-d596-43f7-baeb-05c60d13bb64)
+![Screenshot (132)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/dc38b094-21d8-455b-8ff2-9001ffa5fdf8)
+![Screenshot (133)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/11cfb5b9-f910-49d5-88ba-8f95abaf3769)
+![Screenshot (134)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/7b2b165b-ef47-426a-a2a7-69c51fe7c746)
 
-#### Program Non Circular Linked List
-
-```C++
-/// CAROLINE CARREN
-/// 2311102174
-
-#include <iostream>
-using namespace std;
-
-// Deklarasi struct node
-struct Node
-{
-    int nim;
-    string nama;
-    Node *next;
-};
-
-Node *head;
-Node *tail;
-
-void init()
-{
-    head = NULL;
-    tail = NULL;
-}
-
-// Pengecekan
-bool isEmpty()
-{
-    if (head == NULL)
-        return true;
-    else
-        return false;
-}
-
-// Tambah Depan
-void TambahDepan(string nama, int nim)
-{
-    Node *baru = new Node;
-    baru->nama = nama;
-    baru->nim = nim;
-    baru->next = NULL;
-    if (isEmpty() == true)
-    {
-        head = tail = baru;
-        tail->next = NULL;
-    } else 
-    {
-        baru->next = head;
-        head = baru;
-    }
-}
-
-// Tambah Belakang
-void TambahBelakang(string nama, int nim)
-{
-    Node *baru = new Node;
-    baru->nama = nama;
-    baru->nim = nim;
-    baru->next = NULL;
-
-    if (isEmpty() == true) {
-        head = tail = baru;
-        tail->next = NULL;
-    } else {
-        tail->next = baru;
-        tail = baru;
-    }
-}
-
-// Hitung List
-int hitung(){
-    Node *count;
-    count = head;
-    int jumlah = 0;
-    while (count != NULL){
-        jumlah++;
-        count = count->next;
-    }
-    return jumlah;
-}
-
-// Tambah Tengah
-void TambahTengah(string nama, int nim, int posisi)
-{
-    if (posisi < 1 || posisi > hitung ()) {
-        cout << "Posisi diluar jangkauan" << endl;
-    } else if (posisi == 1) {
-        cout << "Posisi bukan posisi tengah" << endl;
-    } else {
-        Node *baru, *bantu;
-        baru = new Node();
-        baru->nama = nama;
-        baru->nim = nim;
-
-        bantu = head;
-        int nomor = 1;
-        while (nomor < posisi - 1 ) {
-            bantu = bantu->next;
-
-            nomor++;
-        }
-        baru->next = bantu->next;
-        bantu->next = baru;
-    }
-}
-
-// Hapus Depan
-void hapusDepan()
-{
-    Node *del;
-    if (isEmpty() == false) {
-        if (head->next != NULL) {
-            del = head;
-            head = head->next;
-            delete del;
-        } else {
-            head = tail = NULL;
-        }
-    } else {
-        cout << "List kosong!" << endl;
-    }
-}
-
-// Hapus Belakang
-void hapusBelakang()
-{
-    Node *hapus;
-    Node *bantu;
-
-    if (isEmpty() == false) {
-        if (head != tail) {
-            hapus = tail;
-            bantu = head;
-
-            while (bantu->next != tail) {
-                bantu = bantu->next;
-            }
-
-            tail = bantu;
-            tail->next = NULL;
-            delete hapus;
-        }
-        else {
-            head = tail = NULL;
-        }
-    }
-    else {
-        cout << "List kosong!" << endl;
-    }
-}
-
-// Hapus Tengah
-void hapusTengah(int posisi)
-{
-    Node *bantu = nullptr;
-    Node *hapus = nullptr;
-    Node *sebelum = nullptr;
-
-    if (posisi < 1 || posisi > hitung()) {
-        cout << "Posisi di luar jangkauan" << endl;
-    }
-    else if (posisi == 1) {
-        cout << "Posisi bukan posisi tengah" << endl;
-    }
-    else {
-        int nomor = 1;
-        bantu = head;
-
-        while (nomor < posisi) {
-            if (nomor == posisi - 1) {
-                sebelum = bantu;
-            }
-            bantu = bantu->next;
-            nomor++;
-        }
-
-        if (nomor == posisi) {
-            hapus = bantu;
-        }
-
-        bantu = bantu->next;
-        sebelum->next = bantu;
-        delete hapus;
-    }
-}
-
-// Ubah Depan
-void ubahDepan(string nama, int nim)
-{
-    if (isEmpty() == 0) {
-        head->nama = nama;
-        head->nim = nim;
-    }
-    else {
-        cout << "List masih kosong!" << endl;
-    }
-}
-
-// Ubah Tengah
-void ubahTengah(string nama, int nim, int posisi) {
-    Node *bantu;
-    if (isEmpty() == 0) {
-        if (posisi < 1 || posisi > hitung()) {
-            cout << "Posisi di luar jangkauan" << endl;
-        } else if (posisi == 1) {
-            cout << "Posisi bukan posisi tengah" << endl;
-        } else {
-            bantu = head;
-            int nomor = 1;
-            while (nomor < posisi) {
-                bantu = bantu->next;
-                nomor++;
-            }
-            bantu->nama = nama;
-            bantu->nim = nim;
-        }
-    } else {
-        cout << "List masih kosong!" << endl;
-    }
-}
-
-// Ubah Belakang
-void ubahBelakang(string nama, int nim) {
-    if (isEmpty() == 0) {
-        tail->nama = nama;
-        tail->nim = nim;
-    } else {
-        cout << "List masih kosong!" << endl;
-    }
-}
-
-// Hapus List
-void hapusList() {
-    Node *bantu, *hapus;
-    bantu = head;
-    while (bantu != NULL) {
-        hapus = bantu;
-        bantu = bantu->next;
-        delete hapus;
-    }
-    head = tail = NULL;
-    cout << "List berhasil terhapus!" << endl;
-}
-
-// Tampilkan List
-void tampilkan() {
-    Node *bantu;
-    bantu = head;
-    if (isEmpty() == false) {
-        int u = 1;
-        cout << "No." << "\t" << "Nama Mahasiswa" << "\t" << "NIM Mahasiswa" << endl;
-        while (bantu != NULL) {
-            cout << u++ << "\t" << bantu->nama << "\t" << "\t" << bantu->nim << endl;
-            bantu = bantu->next;
-        }
-    } else {
-        cout << "List masih kosong!" << endl;
-    }
-}
-
-
-
-
-
-int main() {
-    int pilihOperasi, nim, posisi;
-    string nama;
-    menu:
-    cout << "Program Single Linked List Non-Circular" << endl;
-    cout << "=======================================" << endl;
-    cout << "1. Tambah Depan" << endl;
-    cout << "2. Tambah belakang" << endl;
-    cout << "3. Tambah Tengah" << endl;
-    cout << "4. Ubah Depan" << endl;
-    cout << "5. Ubah Belakang" << endl;
-    cout << "6. Ubah Tengah" << endl;
-    cout << "7. Hapus Depan" << endl;
-    cout << "8. Hapus Belakang" << endl;
-    cout << "9. Hapus Tengah" << endl;
-    cout << "10. Hapus List" << endl;
-    cout << "11. Tampilkan" << endl;
-    cout << "0. KELUAR" << endl;
-    cout << "Pilih Operasi : ";
-    cin >> pilihOperasi;
-
-    switch (pilihOperasi) {
-    case 1:
-        cout << "-Tambah Depan-" << endl;
-        cout << endl;
-        cout << "Masukan Nama :";
-        cin.ignore();
-        getline(cin, nama);
-        cout << "Masukan NIM :";
-        cin.ignore();
-        cin >> nim;
-        TambahDepan(nama, nim);
-        cout << "Data " << nama << " berhasil diinput!" << endl;
-        
-        goto menu;
-        
-        break;
-
-    case 2:
-        cout << "Tambah Belakang" << endl;
-        cout << endl;
-        int jml;
-        cout << "Masukan jumlah data yang diinputkan: ";
-        cin >> jml;
-        for (int u = 1; u <= jml; u++) {
-            cout << "Masukan Nama :";
-            cin.ignore();
-            getline(cin, nama);
-            cout << "Masukan NIM :";
-            cin >> nim;
-            TambahBelakang(nama, nim);
-        }
-
-        goto menu;
-        
-        break;
-
-    case 3:
-    cout << "-Tambah Tengah-" << endl;
-    cout << endl;
-    cout << "Masukan Nama : ";
-    cin.ignore();
-    getline(cin, nama);
-    cout << "Masukan NIM : ";
-    cin >> nim;
-    cout << "Masukan Posisi : ";
-    cin >> posisi;
-    TambahTengah(nama, nim, posisi);
-    cout << "Data " << nama << " berhasil diinput!" << endl;
-    
-    goto menu;
-    
-    break;
-    
-    case 4:
-    cout << "-Ubah Depan-" << endl;
-    cout << endl;
-    cout << "Masukan Nama : ";
-    cin.ignore();
-    getline(cin, nama);
-    cout << "Masukan NIM : ";
-    cin >> nim;
-    ubahDepan(nama, nim);
-
-    goto menu;
-
-    break;
-    
-    case 5:
-    cout << "-Ubah Belakang-" << endl;
-    cout << endl;
-    cout << "Masukan Nama lama : ";
-    cin.ignore();
-    getline(cin, nama);
-    cout << "Masukan NIM lama : ";
-    cin >> nim;
-    ubahBelakang(nama, nim);
-    
-    goto menu;
-    
-    break;
-
-case 6:
-    cout << "-Ubah Tengah-" << endl;
-    cout << endl;
-    cout << "Masukan Nama: ";
-    cin.ignore();
-    getline(cin, nama);
-    cout << "Masukan NIM : ";
-    cin >> nim;
-    cout << "Posisi : ";
-    cin >> posisi;
-    ubahTengah(nama, nim, posisi);
-    
-    goto menu;
-    
-    break;
-
-    case 7:
-    cout << "Hapus Depan" << endl;
-    hapusDepan();
-    cout << "Data Depan berhasil terhapus!" << endl;
-    
-    goto menu;
-    
-    break;
-
-case 8:
-    cout << "Hapus Belakang" << endl;
-    hapusBelakang();
-    cout << "Data Belakang berhasil terhapus!" << endl;
-    
-    goto menu;
-    
-    break;
-
-case 9:
-    cout << "Hapus Tengah" << endl;
-    cout << "Masukan Posisi : ";
-    cin >> posisi;
-    hapusTengah(posisi);
-    cout << "Data Tengah berhasil terhapus!" << endl;
-    
-    goto menu;
-    
-    break;
-
-case 10:
-    hapusList();
-    
-    goto menu;
-    
-    break;
-
-case 11:
-    cout << "Tampilkan" << endl;
-    tampilkan();
-    
-    goto menu;
-    
-    break;
-
-case 0:
-    cout << "Keluar" << endl;
-    cout << "Terima kasih" << endl;
-    cout << "keluar dari sistem" << endl;
-    exit(0);
-    break;
-
-   
-    }
-}
-```
-#### Output:
-
-
-#### Deskripsi Program : 
-Program ini merupakan implementasi dari Single Linked List Non-Circular menggunakan bahasa pemrograman C++. 
-Single Linked List adalah struktur data berantai di mana setiap node memiliki pointer yang menunjuk ke node berikutnya, dan node terakhir menunjuk ke null. 
-Program ini memiliki fungsi-fungsi dasar untuk manipulasi linked list, seperti penambahan (tambah depan, tambah belakang, tambah tengah), penghapusan (hapus depan, hapus belakang, hapus tengah), pengubahan (ubah depan, ubah belakang, ubah tengah), dan penampilan (tampilkan).
-
-#### Full code Screenshot:
-![carbon](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/e885a44b-6f01-449b-ac6b-5dd81f98f878)
-
-
-#### Program Circular Linked List
 
 
 ```C++
@@ -1551,7 +981,7 @@ int main()
         break;
 
     case 11:
-        cout << "-Tampilkan-" << endl;
+        cout << "-Data Mahasiswa-" << endl;
         tampilkan();
         goto menu;
         break;
@@ -1568,39 +998,62 @@ int main()
 
 #### Output:
 
+![Screenshot (136)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/19573253-8bf1-46ec-b54d-9aa496bc5234)
+![Screenshot (137)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/a0e52127-0f4b-44a1-921c-93bad31b64df)
+![Screenshot (138)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/7207feb5-72e7-4a69-be8a-dc3b8eebd2d2)
+![Screenshot (140)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/1f4d41ba-167d-4934-aaff-0033e80a176e)
+![Screenshot (142)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/7562c318-4098-403a-b55b-0a97349235ae)
+![Screenshot (144)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/aa45e328-7089-4fe6-a3c6-9c50783eb78e)
+![Screenshot (153)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/f68e9d9d-c58f-47f7-8e08-0766be457398)
+![Screenshot (145)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/16f6965f-2671-403a-9ac6-7a0dd00a52b5)
+![Screenshot (147)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/fa622a0b-c738-4cef-85e4-945e99f2670f)
+![Screenshot (149)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/e2d33312-e331-4812-b245-14094bfd8ac2)
+![Screenshot (150)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/49c73f92-7cff-4bc2-9ca2-78ac85232429)
+![Screenshot (156)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/9b8c25f8-87b4-459b-889e-8ea7075f7b7b)
+![Screenshot (152)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/c9537a70-239a-4254-9542-1c454031e440)
 
 #### Deskripsi Program : 
-Program ini merupakan implementasi dari Circular Linked List menggunakan bahasa pemrograman C++. 
-Circular Linked List adalah struktur data berantai di mana setiap node terhubung ke node berikutnya dan node terakhir terhubung kembali ke node pertama.
-Program ini menggunakan konsep menu-driven, di mana pengguna diminta untuk memilih operasi yang ingin dilakukan pada linked list melalui angka yang sesuai dengan menu. 
-Setelah operasi selesai dilakukan, pengguna akan kembali ke menu utama kecuali jika pengguna memilih untuk keluar dari program dengan memilih angka 0. 
-Program ini menggunakan konsep loop menggunakan label menu: dan goto menu untuk kembali ke menu utama setelah operasi selesai dilakukan.
+Program ini adalah sebuah implementasi dari Circular Linked List dalam bahasa C++. Circular Linked List adalah struktur data berbasis linked list di mana setiap elemen dalam list terhubung dengan elemen berikutnya dan elemen terakhir terhubung kembali ke elemen pertama, membentuk suatu lingkaran. Program ini memungkinkan pengguna untuk melakukan beberapa operasi dasar pada Circular Linked List, seperti menambahkan elemen di depan, belakang, atau di tengah, menghapus elemen dari depan, belakang, atau tengah, mengubah nilai elemen di depan, belakang, atau tengah, menghitung jumlah elemen dalam list, dan menampilkan seluruh elemen dalam list.
+
+Struktur data yang digunakan dalam program ini adalah sebuah struktur `Node` yang memiliki dua variabel: `nim` untuk menyimpan Nomor Induk Mahasiswa dan `nama` untuk menyimpan nama mahasiswa. Struktur `Node` ini juga memiliki pointer `next` yang menunjukkan ke Node selanjutnya dalam list.
+
+Program dimulai dengan pendefinisian fungsi-fungsi dasar seperti `init()` untuk menginisialisasi list, `isEmpty()` untuk memeriksa apakah list kosong, dan fungsi-fungsi lainnya seperti `TambahDepan()`, `TambahBelakang()`, `hapusDepan()`, `hapusBelakang()`, `tampilkan()`, dan lain-lain.
+
+Di dalam fungsi `main()`, program menampilkan menu operasi yang tersedia kepada pengguna dan meminta masukan operasi yang diinginkan. Setelah operasi dipilih, program akan menjalankan fungsi yang sesuai dan kembali ke menu utama sampai pengguna memilih untuk keluar dari program.
+
+Program ini merupakan implementasi sederhana dari Circular Linked List yang memungkinkan pengguna untuk menyimpan nama dan nim mahasiswa dan dapat memanipulasi data.
+
 #### Full code Screenshot:
-![carbon (1)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/fc51b39d-0e7f-41b7-a849-8fa74bba44e6)
+![carbon (3)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/a2904968-be2c-49c4-ba76-724e85ff5274)
+
+
 
 
 ## Kesimpulan
 
-Circular Linked List:
+- Circular Linked List:
 
-Circular Linked List adalah jenis struktur data berantai di mana node terakhir menunjuk kembali ke node pertama, membentuk sebuah lingkaran.
-Keuntungan dari Circular Linked List adalah kemampuannya untuk memiliki akses ke node pertama dan terakhir dengan efisien tanpa harus melakukan traversal dari awal.
-Penerapan Circular Linked List cocok untuk implementasi struktur data yang memerlukan iterasi siklik atau penanganan sirkular, seperti manajemen memori dalam sistem operasi atau penjadwalan siklik dalam sistem real-time.
+  Circular Linked List adalah jenis struktur data berantai di mana node terakhir menunjuk kembali ke node pertama, membentuk sebuah lingkaran.
+  Keuntungan dari Circular Linked List adalah kemampuannya untuk memiliki akses ke node pertama dan terakhir dengan efisien tanpa harus melakukan traversal dari awal.
+  Penerapan Circular Linked List cocok untuk implementasi struktur data yang memerlukan iterasi siklik atau penanganan sirkular, seperti manajemen memori dalam sistem operasi atau penjadwalan siklik dalam
+  sistem real-time.
 
-Non-Circular Linked List:
+- Non-Circular Linked List:
 
-Non-Circular Linked List adalah struktur data berantai di mana node terakhir menunjuk ke null, sehingga tidak membentuk lingkaran.
-Pada Non-Circular Linked List, traversal dari awal ke akhir harus dilakukan secara eksplisit untuk mencapai node terakhir.
+  Non-Circular Linked List adalah struktur data berantai di mana node terakhir menunjuk ke null, sehingga tidak membentuk lingkaran.
+  Pada Non-Circular Linked List, traversal dari awal ke akhir harus dilakukan secara eksplisit untuk mencapai node terakhir.
+  Non-Circular Linked List biasanya lebih sederhana dalam implementasi dan manajemen daripada Circular Linked List, tetapi kurang efisien dalam beberapa operasi, terutama jika akses ke node terakhir sering
+  diperlukan.
 
-Non-Circular Linked List biasanya lebih sederhana dalam implementasi dan manajemen daripada Circular Linked List, tetapi kurang efisien dalam beberapa operasi, terutama jika akses ke node terakhir sering diperlukan.
-Penambahan dan Penghapusan Elemen:
+- Penambahan dan Penghapusan Elemen:
 
-Kedua jenis linked list ini memerlukan algoritma khusus untuk menambahkan dan menghapus elemen di depan, belakang, atau di tengah linked list.
-Pada Circular Linked List, perhatian khusus perlu diberikan untuk mengatur ulang pointer tail saat menambah atau menghapus elemen, karena node terakhir harus tetap menunjuk kembali ke node pertama.
-Iterasi dan Akses Data:
+  Kedua jenis linked list ini memerlukan algoritma khusus untuk menambahkan dan menghapus elemen di depan, belakang, atau di tengah linked list.
+  Pada Circular Linked List, perhatian khusus perlu diberikan untuk mengatur ulang pointer tail saat menambah atau menghapus elemen, karena node terakhir harus tetap menunjuk kembali ke node pertama.
 
-Iterasi melalui elemen-elemen linked list dapat dilakukan dengan loop, baik menggunakan pendekatan while atau for, tergantung pada preferensi atau kebutuhan implementasi.
-Akses data pada elemen linked list harus memperhatikan pengecekan kekosongan linked list dan perlunya melakukan traversal dari awal untuk mengakses elemen tertentu.
+- Iterasi dan Akses Data:
+
+  Iterasi melalui elemen-elemen linked list dapat dilakukan dengan loop, baik menggunakan pendekatan while atau for, tergantung pada preferensi atau kebutuhan implementasi.
+  Akses data pada elemen linked list harus memperhatikan pengecekan kekosongan linked list dan perlunya melakukan traversal dari awal untuk mengakses elemen tertentu.
 
 ## Referensi
 [1] Drozdek, A. (2012). Data Structures and Algorithms in C++. (Edisi ke-4). Cengage Learning.
