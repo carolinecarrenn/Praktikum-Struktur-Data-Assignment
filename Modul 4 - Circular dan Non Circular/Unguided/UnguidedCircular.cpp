@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 
+/// deklarasi node struct
 struct Node
 {
     int nim;
@@ -20,11 +21,13 @@ void init()
     tail = NULL;
 }
 
+/// pengecekan
 bool isEmpty()
 {
     return (head == NULL);
 }
 
+/// tambah depan
 void TambahDepan(string nama, int nim)
 {
     Node *baru = new Node;
@@ -45,6 +48,7 @@ void TambahDepan(string nama, int nim)
     }
 }
 
+/// tambah belakang
 void TambahBelakang(string nama, int nim)
 {
     Node *baru = new Node;
@@ -65,6 +69,7 @@ void TambahBelakang(string nama, int nim)
     }
 }
 
+/// hapus belakang
 void hapusBelakang()
 {
     Node *hapus;
@@ -91,6 +96,7 @@ void hapusBelakang()
     }
 }
 
+/// tampilkan
 void tampilkan()
 {
     Node *bantu = head;
@@ -111,6 +117,7 @@ void tampilkan()
     }
 }
 
+/// hitung
 int hitung()
 {
     Node *bantu = head;
@@ -127,6 +134,7 @@ int hitung()
     return jumlah;
 }
 
+/// tambah tengah
 void TambahTengah(string nama, int nim, int posisi)
 {
     if (posisi < 1 || posisi > hitung() + 1)
@@ -157,6 +165,7 @@ void TambahTengah(string nama, int nim, int posisi)
     }
 }
 
+/// hapus depan
 void hapusDepan()
 {
     if (!isEmpty())
@@ -172,6 +181,7 @@ void hapusDepan()
     }
 }
 
+/// hapus tengah
 void hapusTengah(int posisi)
 {
     if (posisi < 1 || posisi > hitung())
@@ -199,6 +209,7 @@ void hapusTengah(int posisi)
     }
 }
 
+/// hapus list
 void hapusList()
 {
     while (!isEmpty())
@@ -221,6 +232,7 @@ void ubahDepan(string nama, int nim)
     }
 }
 
+/// ubah belakang
 void ubahBelakang(string nama, int nim)
 {
     if (!isEmpty())
@@ -234,6 +246,7 @@ void ubahBelakang(string nama, int nim)
     }
 }
 
+/// ubah tengah
 void ubahTengah(string nama, int nim, int posisi)
 {
     if (posisi < 1 || posisi > hitung())
