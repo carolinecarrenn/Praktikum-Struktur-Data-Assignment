@@ -1,5 +1,7 @@
 # <h1 align="center">Laporan Praktikum Modul Linked List Circular and Non Circular</h1>
-<p align="center">Caroline Carren (2311102174)</p>
+<p align="center">Caroline Carren Aurelia R</p>
+<p align="center">2311102174</p>
+<p align="center">IF 11 E</p>
 
 ## Dasar Teori
 
@@ -379,6 +381,9 @@ int main()
     return 0;
 }
 ```
+#### Output :
+![Screenshot (161)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/322ed550-fd29-4c9c-91e1-216d21c61166)
+
 #### Deskripsi Program : 
 Pada awal program, terdapat deklarasi struct Node yang merepresentasikan sebuah simpul atau node dalam linked list. 
 Setiap node memiliki dua bagian, yaitu data yang merupakan nilai yang disimpan dalam simpul dan next yang merupakan pointer ke simpul selanjutnya dalam linked list.
@@ -539,6 +544,9 @@ int main() {
     return 0;
 }
 ```
+#### Output :
+![Screenshot (162)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/f99427e1-24a8-4d69-bd2a-5172106b8675)
+
 #### Deskripsi Program : 
 Program ini adalah implementasi dari single linked list dengan sifat circular menggunakan bahasa pemrograman C++. 
 
@@ -589,12 +597,14 @@ Program ini menyediakan berbagai fungsi dasar untuk mengelola linked list dengan
 
 
 ```C++
-/// CAROLINE CARREN
-/// 2311102174
+/// Nama  : CAROLINE CARREN
+/// Nim   : 2311102174
+/// Kelas : IF 11 E
 
 #include <iostream>
 using namespace std;
 
+/// deklarasi node struct
 struct Node
 {
     int nim;
@@ -611,11 +621,13 @@ void init()
     tail = NULL;
 }
 
+/// pengecekan
 bool isEmpty()
 {
     return (head == NULL);
 }
 
+/// tambah depan
 void TambahDepan(string nama, int nim)
 {
     Node *baru = new Node;
@@ -636,6 +648,7 @@ void TambahDepan(string nama, int nim)
     }
 }
 
+/// tambah belakang
 void TambahBelakang(string nama, int nim)
 {
     Node *baru = new Node;
@@ -656,6 +669,7 @@ void TambahBelakang(string nama, int nim)
     }
 }
 
+/// hapus belakang
 void hapusBelakang()
 {
     Node *hapus;
@@ -682,6 +696,7 @@ void hapusBelakang()
     }
 }
 
+/// tampilkan
 void tampilkan()
 {
     Node *bantu = head;
@@ -702,6 +717,7 @@ void tampilkan()
     }
 }
 
+/// hitung
 int hitung()
 {
     Node *bantu = head;
@@ -718,6 +734,7 @@ int hitung()
     return jumlah;
 }
 
+/// tambah tengah
 void TambahTengah(string nama, int nim, int posisi)
 {
     if (posisi < 1 || posisi > hitung() + 1)
@@ -748,6 +765,7 @@ void TambahTengah(string nama, int nim, int posisi)
     }
 }
 
+/// hapus depan
 void hapusDepan()
 {
     if (!isEmpty())
@@ -763,6 +781,7 @@ void hapusDepan()
     }
 }
 
+/// hapus tengah
 void hapusTengah(int posisi)
 {
     if (posisi < 1 || posisi > hitung())
@@ -790,6 +809,7 @@ void hapusTengah(int posisi)
     }
 }
 
+/// hapus list
 void hapusList()
 {
     while (!isEmpty())
@@ -812,6 +832,7 @@ void ubahDepan(string nama, int nim)
     }
 }
 
+/// ubah belakang
 void ubahBelakang(string nama, int nim)
 {
     if (!isEmpty())
@@ -825,6 +846,7 @@ void ubahBelakang(string nama, int nim)
     }
 }
 
+/// ubah tengah
 void ubahTengah(string nama, int nim, int posisi)
 {
     if (posisi < 1 || posisi > hitung())
@@ -997,19 +1019,46 @@ int main()
 ```
 
 #### Output:
-
+Input data Jawad dengan menu tambah depan :
 ![Screenshot (136)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/19573253-8bf1-46ec-b54d-9aa496bc5234)
+
+Input data Carren dengan tambah tengah :
 ![Screenshot (137)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/a0e52127-0f4b-44a1-921c-93bad31b64df)
+
+Input data Farrel dengan tambah belakang :
 ![Screenshot (138)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/7207feb5-72e7-4a69-be8a-dc3b8eebd2d2)
+
+Input data Wati dengan tambah tengah :
 ![Screenshot (140)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/1f4d41ba-167d-4934-aaff-0033e80a176e)
+
+Menghapus data Denis :
 ![Screenshot (142)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/7562c318-4098-403a-b55b-0a97349235ae)
+
+Input data Owi dengan tambah depan :
 ![Screenshot (144)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/aa45e328-7089-4fe6-a3c6-9c50783eb78e)
+
+Input data David dengan tambah belakang :
 ![Screenshot (153)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/f68e9d9d-c58f-47f7-8e08-0766be457398)
+
+Mengubah data Udin menjadi Idin :
 ![Screenshot (145)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/16f6965f-2671-403a-9ac6-7a0dd00a52b5)
-![Screenshot (147)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/fa622a0b-c738-4cef-85e4-945e99f2670f)
+
+Mengubah data David menjadi Lucy :
+![Screenshot (147)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/cb009a1a-9824-4f5f-a28a-132bf509f4b6)
+
+Menghapus data awal :
+![Screenshot (147)2](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/40014eaf-c04b-42c0-9723-bdfb99d0908b)
+
+Mengubah data awal menjadi Bagas :
 ![Screenshot (149)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/e2d33312-e331-4812-b245-14094bfd8ac2)
+
+Menghapus data terakhir :
 ![Screenshot (150)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/49c73f92-7cff-4bc2-9ca2-78ac85232429)
+
+Tampilan semua data yang telah di input :
 ![Screenshot (156)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/9b8c25f8-87b4-459b-889e-8ea7075f7b7b)
+
+Menu keluar :
 ![Screenshot (152)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/c9537a70-239a-4254-9542-1c454031e440)
 
 #### Deskripsi Program : 
