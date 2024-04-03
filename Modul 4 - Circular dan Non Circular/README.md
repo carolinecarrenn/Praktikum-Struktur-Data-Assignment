@@ -16,11 +16,11 @@ Ada dua jenis utama linked list: linked list linear (non-circular) dan linked li
    Operasi Dasar:
    - Insertion: Menambahkan elemen baru ke linked list di posisi tertentu, seperti di awal, akhir, atau setelah node tertentu.
    - Deletion: Menghapus elemen tertentu dari linked list.
-   - Traversal: Mengunjungi setiap node dalam linked list, biasanya dimulai dari awal hingga akhir.
+   - Traversal: Mengunjungi setiap node dalam linked list, biasanya dimulai dari awal hingga akhir.[1]
    
    Kelebihan Linked List Non-Circular:
    - Fleksibilitas dalam penambahan dan penghapusan elemen, terutama di tengah-tengah linked list.
-   - Ruang memori yang efisien karena node-node hanya membutuhkan ruang tambahan untuk pointer.
+   - Ruang memori yang efisien karena node-node hanya membutuhkan ruang tambahan untuk pointer.[1]
    
    Kekurangan Linked List Non-Circular:
    - Memerlukan pencarian linier untuk mengakses elemen tertentu, tidak seperti array yang dapat diakses secara langsung dengan indeks.[1]
@@ -589,9 +589,13 @@ Program ini menyediakan berbagai fungsi dasar untuk mengelola linked list dengan
 
 ### [Buatlah program menu Linked List Circular untuk menyimpan Nama dan NIM mahasiswa, dengan menggunakan input dari user. ]
 ![Screenshot (130)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/0c53ede6-f1a4-460b-aebb-e5c4f84b219f)
+
 ![Screenshot (131)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/bf7c2b76-d596-43f7-baeb-05c60d13bb64)
+
 ![Screenshot (132)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/dc38b094-21d8-455b-8ff2-9001ffa5fdf8)
+
 ![Screenshot (133)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/11cfb5b9-f910-49d5-88ba-8f95abaf3769)
+
 ![Screenshot (134)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/7b2b165b-ef47-426a-a2a7-69c51fe7c746)
 
 
@@ -1073,7 +1077,8 @@ Di dalam fungsi `main()`, program menampilkan menu operasi yang tersedia kepada 
 Program ini merupakan implementasi sederhana dari Circular Linked List yang memungkinkan pengguna untuk menyimpan nama dan nim mahasiswa dan dapat memanipulasi data.
 
 #### Full code Screenshot:
-![carbon (3)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/a2904968-be2c-49c4-ba76-724e85ff5274)
+![carbon (6)](https://github.com/carolinecarrenn/Praktikum-Struktur-Data-Assignment/assets/161668868/ee61f144-e9ec-4dfd-a394-de59f4e27fe2)
+
 
 
 
