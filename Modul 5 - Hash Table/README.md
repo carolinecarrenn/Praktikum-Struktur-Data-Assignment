@@ -803,5 +803,7 @@ Kesimpulan yang dapat di ambil yaitu :
    Pilihan-pilihan ini akan memengaruhi kinerja dan efisiensi dari struktur data hash table tersebut.
 
 ## Referensi
+
 [1] Adam Drozdek, "Data Structures and Algorithms in C++," 2nd ed. Boston, MA: Cengage Learning, 2012.
+
 [2] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, "Introduction to Algorithms," 3rd ed. Cambridge, MA: The MIT Press, 2009.
