@@ -1,8 +1,15 @@
 # <h1 align="center">Laporan Praktikum Modul Queue </h1>
-<p align="center">Caroline Carren Aurelia R</p>
-<p align="center">2311102174</p>
+<p align="center">2311102174 - Caroline Carren Aurelia R</p>
 <p align="center">IF 11 E</p>
 
+## Table of Contents
+1. [Tujuan Praktikum](#tujuan-praktikum)
+2. [Dasar Teori](#dasar-teori)
+3. [Guided](#guided)
+4. [Unguided](#unguided)
+5. [Kesimpulan](#kesimpulan)
+6. [Referensi](#referensi)
+   
 ## Tujuan Praktikum 
 1. Mahasiswa dapat memahami Konsep Antrian
 2. Mahasiswa dapat mengimplementasikan Antrian
